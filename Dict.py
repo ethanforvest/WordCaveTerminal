@@ -10,7 +10,7 @@ URL = "https://define.wrdp.app/" + word
 r = requests.get(URL)
 json = r.json()
 
-for word in range(5):
+for word in range(15):
 	try:
   		definition = json['Senses'][word]['Definition']
   		examples = json['Senses'][word]['Examples']
