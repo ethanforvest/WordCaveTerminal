@@ -13,6 +13,17 @@ example_count = 0
 while True:
     init(autoreset=True)
     word_input = input("Enter a word: ")
+
+    if word_input.isnumeric() == True:
+        print("Please enter a valid word! not a number(s)!")
+        break
+
+    try:
+        word_input = word_input.strip()
+    except:
+        print("Please enter a valid word!")
+        break
+
     os.system("cls")
     URL = "https://define.wrdp.app/" + word_input
 
