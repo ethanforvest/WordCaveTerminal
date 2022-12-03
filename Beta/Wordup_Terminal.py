@@ -2,10 +2,8 @@ import requests
 import json
 from colorama import init
 from colorama import Fore, Back, Style
-import os
-import sys  
-sys.path.append('C:/Users/ethan/Desktop/Dict/Beta/Extractors') 
-import wordup
+import os 
+from Extractors import wordup
 
 definition_count = 0
 example_count = 0
