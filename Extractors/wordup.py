@@ -1,6 +1,6 @@
 def definition_count(json):
 	definition_count = 0
-	for word in range(20):
+	for word in range(100):
 		try:
 			definition = json['Senses'][word]['Definition']
 			definition_count = definition_count + 1
@@ -10,7 +10,7 @@ def definition_count(json):
 
 def example_count(json):
 	example_count = 0
-	for word in range(20):
+	for word in range(100):
 		try:
 			definition = json['Senses'][word]['Examples']
 			example_count = example_count + 1
