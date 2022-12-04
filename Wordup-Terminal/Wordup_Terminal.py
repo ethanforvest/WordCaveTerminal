@@ -1,6 +1,5 @@
-import requests  
-import json
-import os 
+import requests
+import os
 from Extractors import wordup
 
 while True:
@@ -18,10 +17,10 @@ while True:
     os.system("cls")
     URL = "https://define.wrdp.app/" + word_input
     r = requests.get(URL)
-    json = r.json()
+    json_ = r.json()
 
-    wordup.printer(json)
+    wordup.printer(json_)
 
     print("\n")
-    print(f"{wordup.definition_counter(json)} Definition(s) | {wordup.example_counter(json)} Example(s)")
+    print(f"{wordup.definition_counter(json_)} Definition(s) | {wordup.example_counter(json_)} Example(s)")
     print("\n")
