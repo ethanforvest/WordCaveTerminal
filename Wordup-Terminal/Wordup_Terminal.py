@@ -5,7 +5,7 @@ from Extractors import wordup
 while True:
     word_input = input("Enter a word: ")
 
-    if word_input.isnumeric() == True:
+    if word_input.isnumeric() is True:
         print("Please enter a valid word! not a number(s)!\n")
         continue
     try:
