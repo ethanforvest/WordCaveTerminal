@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-def definition_count(json):
-=======
 def WordText(json): #Resulted word
 	try:
 		WordText = json['WordText']
@@ -9,7 +6,6 @@ def WordText(json): #Resulted word
 	return WordText
 
 def definition_counter(json): #Looking for how many definitions are there
->>>>>>> beta
 	definition_count = 0
 	for word in range(100):
 		try:
@@ -19,11 +15,7 @@ def definition_counter(json): #Looking for how many definitions are there
 			break
 	return definition_count       
 
-<<<<<<< HEAD
-def example_count(json):
-=======
 def example_counter(json): #Looking for how many examples are there
->>>>>>> beta
 	example_count = 0
 	for word in range(100):
 		try:
@@ -31,9 +23,6 @@ def example_counter(json): #Looking for how many examples are there
 			example_count = example_count + 1
 		except:
 			continue
-<<<<<<< HEAD
-	return example_count
-=======
 	return example_count
 
 def printer(json): #Putting everything together and print them
@@ -59,4 +48,3 @@ def printer(json): #Putting everything together and print them
 	        continue
 	    else:
 	        print(f"Example: {examples}")
->>>>>>> beta
