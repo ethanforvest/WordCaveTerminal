@@ -36,7 +36,7 @@ def gifs(self):  # Looking for images and GIFs
     gifs = r.json()
 
 
-def id_finder(self):
+def id_finder(json):
     id = json['Senses'][word]['ID']
 
 
