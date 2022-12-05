@@ -58,8 +58,7 @@ def printer(json):  # Putting everything together and print them
             word_type = json['Senses'][word]['Type']
         except:
             word_type = ""
-        print(
-            f"Meaning {Fore.YELLOW}({word_type}){Style.RESET_ALL}: {Fore.GREEN + definition}")
+        print(f"Meaning {Fore.YELLOW}({word_type}){Style.RESET_ALL}: {Fore.GREEN + definition}")
         try:
             examples = json['Senses'][word]['Examples']
         except:
@@ -71,7 +70,9 @@ def printer(json):  # Putting everything together and print them
             for key, value in gif_json.items():
                 if key == i_d:
                     if "https" not in value:
-                        print(
-                            f"{Fore.CYAN}GIF/IMG:{Style.RESET_ALL} https://word-images.cdn-wordup.com/opt/{value}")
+                        if "opt" not in value:
+                            print(f"{Fore.CYAN}GIF/IMG:{Style.RESET_ALL} https://word-images.cdn-wordup.com/opt/{value}")
+                        else:
+                            print(f"{Fore.CYAN}GIF/IMG:{Style.RESET_ALL} https://word-images.cdn-wordup.com/{value}")
                     else:
                         print(f"{Fore.CYAN}GIF/IMG:{Style.RESET_ALL} {value}")
