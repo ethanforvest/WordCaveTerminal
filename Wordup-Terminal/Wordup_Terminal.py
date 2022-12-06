@@ -1,7 +1,13 @@
 import requests
 import os
+import platform
 from Extractors import wordup
 
+if platform.system() == "Windows":
+    system_v = "cls"
+elif platform.system() == "Linux" or platform.system() == "Linux2":
+    system_v = "clear"
+    
 while True:
     word_input = input("Enter a word: ")
 
@@ -13,8 +19,9 @@ while True:
     except:
         print("Please enter a valid word!")
         continue
-
-    os.system("cls")
+    
+    os.system(system_v) 
+    
     URL = "https://define.wrdp.app/" + word_input
     r = requests.get(URL)
     json_ = r.json()
