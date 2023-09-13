@@ -23,9 +23,14 @@ while True:
     os.system(system_v) 
     
     URL = "https://define.wrdp.app/" + word_input
-    r = requests.get(URL)
-    json_ = r.json()
+    response = requests.get(URL)
+    content_length = response.headers['Content-Length']
 
+    if content_length == "0":
+        print(f"Not Found -> \"{word_input}\"\n")
+        continue
+ 
+    json_ = response.json()
     wordup.printer(json_)
 
     print("\n")
